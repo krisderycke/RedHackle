@@ -12,8 +12,6 @@ body {
 
 .hero {
   background: url("Liberation16.JPG");
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
