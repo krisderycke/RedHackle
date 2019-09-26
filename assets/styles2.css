@@ -6,12 +6,14 @@
 }
 
 body {
-  font-family: "Oswald", "sans-serif";
+  font-family: "Rosario", sans-serif;
   background: #f9f9f9;
 }
 
 .hero {
   background: url("Liberation16.JPG");
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,7 +22,35 @@ body {
   height: 100vh;
 }
 
+.title {
+  text-align: center;
+  width: 100%;
+  color: white;
+  background-color: rgba(53, 52, 52, 0.692);
+  font-family: "Oswald";
+  font-size: 3.5rem;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 5px;
+  border: 5px solid white;
+  border-right: none;
+  border-left: none;
+}
+
+.title span {
+  color: red;
+}
+
+.wrapper {
+  background-color: white;
+  padding-top: 2.5rem;
+}
+
 .container {
+  background-color: #f9f9f9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,7 +62,7 @@ body {
           justify-content: center;
   width: 100%;
   max-width: 1000px;
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .picture {
