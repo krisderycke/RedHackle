@@ -18,41 +18,36 @@ body {
 }
 
 .wrapper {
-  max-width: 1000px;
-  margin: 2rem auto;
-  overflow: auto;
-  padding: 0 2rem;
+  background-color: blue;
 }
 
-/* .container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  height: 350px;
-  width: 100%;
-  max-width: 1280px;
-  margin: 20px auto;
-  background-color: red;
-  padding-top: 50px;
-} */
 .container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-  background: #f1f1f1;
-  margin-bottom: 2rem;
-  padding-left: 0;
-}
+  grid-gap: 2rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: green;
 
-.img {
-  background: url("./assets/Liberation167.JPG");
-  background-size: cover;
-  background-position: center;
+  padding-left: 0;
+  max-width: 1280px;
+  width: 100%;
+}
+.image-container {
+  background-color: red;
+}
+img {
+  width: 100%;
+  max-width: 500px;
+}
+@media (max-width: 860px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 .text-container {
-  /* width: 350px; */
   padding: 2rem;
 }
 .btn {
