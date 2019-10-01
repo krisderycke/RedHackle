@@ -1,20 +1,25 @@
 body {
   font-family: "Rosario", sans-serif;
-
-  max-width: 450px;
-  width: 80%;
-  margin: 0 auto;
-  // background: url("./Assets/pics/antique-black-communication-821754.jpg");
   background-color: #354044;
   font-size: 16px;
   text-transform: uppercase;
   overflow: hidden;
   // clip-path: polygon(1% 0, 80% 0%, 100% 100%, 14% 79%);
 }
-
+.back {
+  color: white;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  margin-left: 20px;
+}
 #form {
   position: absolute;
-  left: -43%;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  left: 15%;
+  padding-left: 25px;
 }
 
 .header,
@@ -25,7 +30,7 @@ body {
   padding: 10px 0;
 }
 .header {
-  width: 400px;
+  // width: 400px;
   font-size: 50px;
   margin: 20px 0;
 }
