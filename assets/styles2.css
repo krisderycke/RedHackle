@@ -39,12 +39,79 @@ span {
   color: red;
 }
 
+.arrow {
+  position: absolute;
+  top: 85%;
+  left: 5%;
+}
+
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid #343a40;
+  border-right: 3px solid #343a40;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: -10px;
+  -webkit-animation: animate 3s infinite;
+          animation: animate 3s infinite;
+}
+
+.arrow span:nth-child(2) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+            transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+            transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+            transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+            transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
 .wrapper {
   background-color: white;
 }
 
 /* alternative styling bs navbar*/
 .navbar {
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: rgba(52, 58, 64, 0.815) !important;
 }
 
@@ -54,6 +121,7 @@ span {
 
 .nav-link {
   padding-right: 30px !important;
+  color: white !important;
 }
 
 .nav-link:hover {
@@ -131,6 +199,7 @@ span {
 }
 
 .text-container h3 {
+  padding-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -141,6 +210,13 @@ span {
   margin-top: 2rem;
   padding: 1rem 2rem;
   cursor: pointer;
+}
+
+.btn:hover {
+  color: black;
+  background-color: #bbb9b9;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .line {

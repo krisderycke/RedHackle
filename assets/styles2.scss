@@ -37,6 +37,45 @@ body {
 span {
   color: red;
 }
+.arrow {
+  position: absolute;
+  top: 85%;
+  left: 5%;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+}
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid rgb(52, 58, 64);
+  border-right: 3px solid rgb(52, 58, 64);
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 3s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
 
 .wrapper {
   background-color: white;
@@ -44,13 +83,25 @@ span {
 }
 /* alternative styling bs navbar*/
 .navbar {
+  //   animation: jump 5s infinite;
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: rgba(52, 58, 64, 0.815) !important;
 }
+// @keyframes jump {
+//   10% {
+//     margin-top: -50px;
+//   }
+//   100% {
+//     margin-top: 0px;
+//   }
+// }
 .collapse {
   padding-right: 25px;
 }
 .nav-link {
   padding-right: 30px !important;
+  color: white !important;
   //   letter-spacing: 0;
 }
 
@@ -116,6 +167,7 @@ span {
   padding: 1.5rem;
   line-height: 25px;
   h3 {
+    padding-top: 10px;
     margin-bottom: 30px;
   }
 }
@@ -127,6 +179,11 @@ span {
   margin-top: 2rem;
   padding: 1rem 2rem;
   cursor: pointer;
+  &:hover {
+    color: black;
+    background-color: rgb(187, 185, 185);
+    transition: 0.5s;
+  }
 }
 
 .line {
