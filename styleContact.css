@@ -6,20 +6,11 @@ body {
   overflow: hidden;
 }
 
-.back {
-  color: white;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  margin-left: 20px;
-}
-
 #form {
   position: absolute;
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  left: 15%;
   padding-left: 25px;
 }
 
@@ -63,6 +54,22 @@ body {
   border-radius: 2px;
   -webkit-box-shadow: 6px 3px 13px 0px #161414;
           box-shadow: 6px 3px 13px 0px #161414;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 410px;
+  max-width: 82%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .button {

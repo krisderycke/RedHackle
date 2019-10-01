@@ -7,7 +7,6 @@
 
 body {
   font-family: "Rosario", sans-serif;
-  background: #f5efef;
 }
 
 .hero {
@@ -215,8 +214,8 @@ span {
 .btn:hover {
   color: black;
   background-color: #bbb9b9;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .line {
@@ -225,18 +224,26 @@ span {
 }
 
 .footer {
-  padding: 10px 20px;
+  padding: 5px 20px 5px 20px;
   background-color: #434e58;
   color: white;
   text-align: center;
-  height: 33vh;
+  height: 150px;
 }
 
-.footer ul {
-  list-style: none;
+.footer p {
+  margin-bottom: 0;
 }
 
-.footer li {
-  font-size: 1.5rem;
+.social {
+  margin-bottom: 20px;
+}
+
+.fab {
+  margin: 10px;
+}
+
+.footer-text {
+  font-size: 12px;
 }
 /*# sourceMappingURL=styles2.css.map */
