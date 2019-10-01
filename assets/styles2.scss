@@ -5,8 +5,9 @@
 }
 body {
   font-family: "Rosario", sans-serif;
-  background: #f9f9f9;
+  background: #f5efef;
 }
+
 .hero {
   background: url("Liberation16.JPG");
   //   filter: blur(2px);
@@ -25,30 +26,85 @@ body {
   font-family: "Oswald";
   font-size: 3.5rem;
   position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 20%;
+  //   left: 50%;
+  //   transform: translateX(-50%);
   padding: 5px;
   border: 5px solid white;
   border-right: none;
   border-left: none;
-  span {
-    color: red;
-  }
 }
-.wrapper {
-  background-color: white;
-  padding-top: 2.5rem;
+span {
+  color: red;
 }
 
+.wrapper {
+  background-color: white;
+  //   padding-top: 2.5rem;
+}
+/* alternative styling bs navbar*/
+.navbar {
+  background-color: rgba(52, 58, 64, 0.815) !important;
+}
+.collapse {
+  padding-right: 25px;
+}
+.nav-link {
+  padding-right: 30px !important;
+  //   letter-spacing: 0;
+}
+
+.nav-link:hover {
+  letter-spacing: 3px;
+}
+
+.nav-link:after,
+.nav-link:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.nav-link:hover:after,
+.nav-link:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 450ms ease-in-out;
+  width: 100%;
+}
+
+.nav-link:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+/*end navbar styling */
+.active {
+  font-size: 1.2rem;
+  font-style: italic;
+  letter-spacing: 3px;
+}
 .container {
-  background-color: rgb(249, 249, 249);
+  background-color: rgb(230, 230, 230);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 1000px;
   padding-top: 2rem;
+}
+.text-container > p::first-letter {
+  font-size: 32px;
+  //   font-style: italic;
+  color: red;
+  //   font-family: "Kaushan Script", cursive;
 }
 
 .picture {
@@ -58,6 +114,10 @@ body {
 .text-container {
   width: 100%;
   padding: 1.5rem;
+  line-height: 25px;
+  h3 {
+    margin-bottom: 30px;
+  }
 }
 
 .btn {
@@ -67,4 +127,23 @@ body {
   margin-top: 2rem;
   padding: 1rem 2rem;
   cursor: pointer;
+}
+
+.line {
+  width: 90%;
+  margin: 3% 5%;
+}
+
+.footer {
+  padding: 10px 20px;
+  background-color: rgb(67, 78, 88);
+  color: white;
+  text-align: center;
+  height: 33vh;
+  ul {
+    list-style: none;
+  }
+  li {
+    font-size: 1.5rem;
+  }
 }

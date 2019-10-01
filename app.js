@@ -1,4 +1,16 @@
-// const image = document.getElementsByClassName("img");
+var links = document.getElementsByClassName("nav-link");
 
-// TweenMax.from(image[0], 1, { width: 0 });
-// console.log("hello");
+// Loop through the links and add the active class to the current/clicked button
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+
+    // check if there is already an active
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+
+    // Add the active class to the current/clicked button
+    this.className += " active";
+  });
+}
