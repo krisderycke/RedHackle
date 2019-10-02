@@ -6,7 +6,12 @@
 body {
   font-family: "Rosario", sans-serif;
 }
-
+.body-hist {
+  background: url("./tartan.jpg");
+  background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+}
 .hero {
   background: url("Liberation16_2.JPG");
   //   filter: blur(2px);
@@ -159,6 +164,8 @@ span {
 .history {
   display: block;
   padding: 32px 50px;
+  box-shadow: -10px 2px 13px -7px #131212, 10px 2px 13px -7px #131212,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 .text-container > p::first-letter {
   font-size: 32px;
