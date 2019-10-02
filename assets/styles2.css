@@ -165,6 +165,14 @@ span {
   letter-spacing: 3px;
 }
 
+.containers {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  -webkit-box-shadow: -10px 2px 13px -7px #535252, 10px 2px 13px -7px #535252, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+          box-shadow: -10px 2px 13px -7px #535252, 10px 2px 13px -7px #535252, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
 .container {
   background-color: #e6e6e6;
   display: -webkit-box;
@@ -177,7 +185,7 @@ span {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   padding-top: 2rem;
 }
 
@@ -202,7 +210,14 @@ span {
   margin-bottom: 30px;
 }
 
+img {
+  -webkit-box-shadow: 5px 8px 13px -5px black, 5px -2px 13px -5px black;
+          box-shadow: 5px 8px 13px -5px black, 5px -2px 13px -5px black;
+}
+
 .btn {
+  -webkit-box-shadow: 5px 8px 13px -5px black;
+          box-shadow: 5px 8px 13px -5px black;
   display: inline-block;
   color: white;
   background: black;
@@ -255,7 +270,7 @@ span {
 }
 
 /* start adding mediaquerries*/
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 768px) {
   .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -264,6 +279,12 @@ span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .btn {
+    left: 50%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .image-container {
     margin-top: 10px;
