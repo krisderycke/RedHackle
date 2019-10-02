@@ -241,6 +241,13 @@ span {
 
 .fab {
   margin: 10px;
+  color: whitesmoke;
+}
+
+.fab:hover {
+  color: red;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .footer-text {
@@ -248,12 +255,21 @@ span {
 }
 
 /* start adding mediaquerries*/
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 630px) {
   .container {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .image-container {
     margin-top: 10px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .footer-text > p {
     font-size: 10px;
@@ -270,6 +286,15 @@ span {
   }
   #nav {
     display: none;
+  }
+  .hero {
+    background: url("../assets/Liberation124_2.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .last {
+    padding-bottom: 54px;
   }
 }
 /*# sourceMappingURL=styles2.css.map */

@@ -26,8 +26,6 @@ body {
   font-size: 3.5rem;
   position: absolute;
   top: 20%;
-  //   left: 50%;
-  //   transform: translateX(-50%);
   padding: 5px;
   border: 5px solid white;
   border-right: none;
@@ -205,6 +203,11 @@ span {
 }
 .fab {
   margin: 10px;
+  color: whitesmoke;
+  &:hover {
+    color: rgb(255, 0, 0);
+    transition: 0.3s;
+  }
 }
 
 .footer-text {
@@ -212,13 +215,16 @@ span {
 }
 /* start adding mediaquerries*/
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 630px) {
   .container {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   .image-container {
     margin-top: 10px;
+    order: 2;
   }
+
   .footer-text > p {
     font-size: 10px;
   }
@@ -234,5 +240,14 @@ span {
   }
   #nav {
     display: none;
+  }
+  .hero {
+    background: url("../assets/Liberation124_2.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .last {
+    padding-bottom: 54px;
   }
 }
