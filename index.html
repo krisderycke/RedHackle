@@ -67,9 +67,14 @@
           class="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
-          <ul class="navbar-nav" data-toggle="collapse">
+          <ul
+            class="navbar-nav"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+          >
+            <!--use data-toggle and target on the <ul> so the navbar colaapses on clicking the links on mobile-->
             <li class="nav-item ">
-              <a class="nav-link " href="#geschiedenis">Geschiedenis</a>
+              <a class="nav-link" href="#geschiedenis">Geschiedenis</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#aanbod">Aanbod</a>

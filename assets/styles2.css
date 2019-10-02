@@ -225,7 +225,7 @@ span {
 
 .footer {
   padding: 5px 20px 5px 20px;
-  background-color: #434e58;
+  background-color: rgba(53, 52, 52, 0.692);
   color: white;
   text-align: center;
   height: 150px;
@@ -245,5 +245,31 @@ span {
 
 .footer-text {
   font-size: 12px;
+}
+
+/* start adding mediaquerries*/
+@media only screen and (max-width: 576px) {
+  .container {
+    display: block;
+  }
+  .image-container {
+    margin-top: 10px;
+  }
+  .footer-text > p {
+    font-size: 10px;
+  }
+  .line {
+    display: none;
+  }
+  .title {
+    font-size: 2rem;
+    top: 10%;
+  }
+  .navbar-brand {
+    padding-left: 0px !important;
+  }
+  #nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles2.css.map */
