@@ -139,7 +139,8 @@ span {
   font-style: italic;
   letter-spacing: 3px;
 }
-.containers {
+.containers,
+.history {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
@@ -155,7 +156,15 @@ span {
   max-width: 900px;
   padding-top: 2rem;
 }
+.history {
+  display: block;
+  padding: 32px 50px;
+}
 .text-container > p::first-letter {
+  font-size: 32px;
+  color: red;
+}
+.history > p::first-letter {
   font-size: 32px;
   color: red;
 }
@@ -175,6 +184,22 @@ span {
 }
 img {
   box-shadow: 5px 8px 13px -5px black, 5px -2px 13px -5px black;
+}
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 25px;
+  box-shadow: none;
+}
+.bw {
+  width: 200px;
+  height: 200px;
 }
 
 .btn {
