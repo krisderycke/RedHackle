@@ -10,12 +10,12 @@ body {
 }
 
 .body-hist {
-  background: url("./tartan.jpg");
+  background: url("../imgs/tartan.jpg");
   background-position: center;
 }
 
 .hero {
-  background: url("Liberation16_2.JPG");
+  background: url("../imgs/Liberation16_2.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
