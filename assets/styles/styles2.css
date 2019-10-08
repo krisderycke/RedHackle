@@ -350,17 +350,23 @@ img {
   .navbar-brand {
     padding-left: 0px !important;
   }
-  #nav {
-    display: none;
-  }
   .hero {
-    background: url("../assets/Liberation124_2.JPG");
+    background: url("../imgs/Liberation124_2.JPG");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   .last {
     padding-bottom: 54px;
+  }
+  .logos {
+    display: inline;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 /*# sourceMappingURL=styles2.css.map */

@@ -9,6 +9,8 @@ $_SESSION = array();
 session_destroy();
  
 // Redirect to login page
-header("location: leden.php");
+// header("location: confirmLogOut.php");
+header("location: index.html");
+
 exit;
 ?>

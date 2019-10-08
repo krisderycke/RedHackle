@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Rosario", sans-serif;
+}
+
+.container {
+  background-color: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  padding-top: 2rem;
+}
+
+.welcome-link {
+  padding-right: 30px !important;
+  font-size: 2rem;
+  color: black;
+}
+
+.welcome-link:hover {
+  font-style: italic;
+}
+
+.welcome-link:after,
+.welcome-link:before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 1px solid rgba(14, 13, 13, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 280ms ease-in-out;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.welcome-link:hover:after,
+.welcome-link:hover:before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-color: #0e0d0d;
+  -webkit-transition: width 450ms ease-in-out;
+  transition: width 450ms ease-in-out;
+  width: 100%;
+}
+
+.welcome-link:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul a:link {
+  text-decoration: none;
+}
+/*# sourceMappingURL=welcome.css.map */
