@@ -7,7 +7,59 @@ body {
 
   // clip-path: polygon(1% 0, 80% 0%, 100% 100%, 14% 79%);
 }
+.navbar {
+  //   animation: jump 5s infinite;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(52, 58, 64, 0.815) !important;
+}
+// @keyframes jump {
+//   10% {
+//     margin-top: -50px;
+//   }
+//   100% {
+//     margin-top: 0px;
+//   }
+// }
+.collapse {
+  padding-right: 25px;
+}
+.nav-link {
+  padding-right: 30px !important;
+  color: white !important;
+  //   letter-spacing: 0;
+}
 
+.nav-link:hover {
+  letter-spacing: 3px;
+}
+
+.nav-link:after,
+.nav-link:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.nav-link:hover:after,
+.nav-link:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 450ms ease-in-out;
+  width: 100%;
+}
+
+.nav-link:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
 #form {
   position: absolute;
   width: 100%;

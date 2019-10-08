@@ -14,6 +14,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <head>
     <meta charset="UTF-8" />
     <title>Welcome</title>
+    <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon">
+
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"
