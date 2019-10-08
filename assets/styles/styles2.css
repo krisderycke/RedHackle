@@ -315,7 +315,7 @@ img {
 }
 
 /* start adding mediaquerries*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .container {
     display: -webkit-box;
     display: -ms-flexbox;
