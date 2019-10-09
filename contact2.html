@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/313cec68ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Red Hackle Pipe Band and Highland Dancers</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/styles/styles2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rosario&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul
+            class="navbar-nav"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+          >
+            <!--use data-toggle and target on the <ul> so the navbar colaapses on clicking the links on mobile-->
+            <li class="nav-item ">
+              <a class="nav-link" href="./geschiedenis.html">Geschiedenis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aanbod">Aanbod</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact2.php">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./leden.php">Leden portaal</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="main-text">
+  <p>  
+  <p>Vul onderstaande gegevens in m.b.t. een optreden
+
+  <form action="./assets/cgi-bin/send_form_mail.php.cgi" method="post"></form>
+
+<input type="hidden" name="r_email" value="bookings@redhackle.be">
+<input type="hidden" name="form_type" value="own_form">
+<input type="hidden" name="s_subject" value="contact band - booking">
+<input type="hidden" name="required[Naam]" value="NAAM">
+<input type="hidden" name="required[E-mail]" value="EMAIL">
+<input type="hidden" name="required[Plaats]" value="PLAATS">
+<input type="hidden" name="required[Datum]" value="DATUM">
+
+      <table width="465" border="0" id="form">
+<tr>
+	<td nowrap="nowrap"><b class="current style1 style1">Naam</b></td>
+	<td width="299"><input type="text" name="NAAM" maxlength="54" size="56" value=""></td>
+</tr>
+<tr>
+<td nowrap="nowrap"><span class="style1"><b>E-mail</b></span></td>
+<td><input type="text" name="EMAIL" maxlength="54" size="56" value=""></td>
+</tr>
+
+<tr>
+  <td valign="top" nowrap="nowrap">Plaats optreden </td>
+  <td><input name="PLAATS" type="text" id="PLAATS" value="" maxlength="54" size="56" /></td>
+</tr>
+<tr>
+  <td valign="top" nowrap="nowrap">Datum / Tijdstip </td>
+  <td><input name="DATUM" type="text" id="DATUM" value="" maxlength="54" size="56" /></td>
+</tr>
+<tr>
+  <td valign="top" nowrap="nowrap">Aantal spelers </td>
+  <td><select name="AANTAL">
+    <option>2 (minimum)</option>
+    <option>3-5</option>
+    <option>6-10</option>
+    <option>11-15</option>
+    <option selected="selected">volledige band</option>
+  </select></td>
+</tr>
+<tr>
+  <td valign="top" nowrap="nowrap">Samenstelling</td>
+  <td><select name="SAMENSTELLING">
+    <option>enkel pipers</option>
+    <option>pipers + drummer(s)</option>
+    <option selected="selected">pipers, drummers en dansers</option>
+    <option>enkel dansers</option>
+  </select></td>
+</tr>
+<tr>
+  <td valign="top" nowrap="nowrap">Type optreden </td>
+  <td><select name="TYPE_OPTREDEN">
+    <option selected="selected">taptoe</option>
+    <option>concert</option>
+    <option>optocht, stoet, braderij,...</option>
+    <option>prive feest (verjaardag, jubleum, tuinfeest,...)</option>
+    <option>bedrijfsfeest, receptie,...</option>
+    <option>officiele gelegenheid, inhuldiging,...</option>
+    <option>huwelijk</option>
+    <option>uitvaart, begrafenis</option>
+    <option>ander (omschrijf in uw vraag hieronder)</option>
+  </select></td>
+</tr>
+<tr>
+  <td valign="top" nowrap="nowrap"><strong>Uw vraag </strong></td>
+  <td><textarea name="VRAAG" cols="54" rows="5"></textarea></td>
+</tr>
+<tr>
+  <td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2">
+      <input type="submit" value="Verstuur">&nbsp;
+      <input name="reset" type="reset" value="Verwijder" /></td>
+</tr>
+</table>
+</body>
+</html>
