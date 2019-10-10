@@ -162,6 +162,7 @@ span {
   max-width: 900px;
   padding-top: 2rem;
 }
+
 .history {
   display: block;
   padding: 32px 50px;
@@ -210,13 +211,14 @@ img {
   height: 200px;
 }
 
-.btn {
+.btn-index {
   box-shadow: 5px 8px 13px -5px black;
   display: inline-block;
   color: white;
   background: black;
   margin-top: 2rem;
   padding: 1rem 2rem;
+  border-radius: 5px;
   cursor: pointer;
   &:hover {
     color: black;
@@ -294,12 +296,18 @@ img {
     background-position: center;
     background-repeat: no-repeat;
   }
+
   .last {
     padding-bottom: 54px;
   }
+  .social {
+    margin-bottom: 0;
+  }
+
   .logos {
     display: inline;
   }
+
   .logo {
     width: 100px;
     height: 100px;

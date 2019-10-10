@@ -260,7 +260,7 @@ img {
   height: 200px;
 }
 
-.btn {
+.btn-index {
   -webkit-box-shadow: 5px 8px 13px -5px black;
           box-shadow: 5px 8px 13px -5px black;
   display: inline-block;
@@ -268,10 +268,11 @@ img {
   background: black;
   margin-top: 2rem;
   padding: 1rem 2rem;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.btn:hover {
+.btn-index:hover {
   color: black;
   background-color: #bbb9b9;
   -webkit-transition: 0.4s;
@@ -358,6 +359,9 @@ img {
   }
   .last {
     padding-bottom: 54px;
+  }
+  .social {
+    margin-bottom: 0;
   }
   .logos {
     display: inline;

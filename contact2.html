@@ -25,6 +25,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./assets/styles/contactForm.css" />
     <link rel="stylesheet" href="./assets/styles/styles2.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap"
@@ -40,120 +41,292 @@
     />
   </head>
   <body>
-        <button
-          class="navbar-toggler"
-          type="button"
+    <nav
+      class="navbar sticky-top navbar-expand-md navbar-dark bg-dark"
+      id="nav"
+    >
+      <a class="navbar-brand" style="padding-left:25px" href="#">Red Hackle</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul
+          class="navbar-nav"
           data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-target=".navbar-collapse.show"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul
-            class="navbar-nav"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
-          >
-            <!--use data-toggle and target on the <ul> so the navbar colaapses on clicking the links on mobile-->
-            <li class="nav-item ">
-              <a class="nav-link" href="./geschiedenis.html">Geschiedenis</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#aanbod">Aanbod</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact2.php">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./leden.php">Leden portaal</a>
-            </li>
-          </ul>
+          <!--use data-toggle and target on the <ul> so the navbar colapses on clicking the links on mobile-->
+
+          <li class="nav-item ">
+            <a class="nav-link" href="./geschiedenis.html">Geschiedenis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./aanbod.html">Aanbod</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact2.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./leden.php">Leden portaal</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h2>Welkom, maak hier uw keuze: wilt u ons boeken of hebt u een algemene vraag? </h2>
+<div class="toggles">
+    <button class="btn-contact" onclick="myFunction()">Boeking</button>
+    <button class="btn-contact" onClick="myFunction2()">Algemene info</button>
+  </div>
+    <div class="form-wrapper" id="boeking">
+      <h3>Vul onderstaande gegevens in m.b.t. een optreden</h3>
+      <form action="./assets/cgi-bin/send_form_mail.php.cgi" method="post">
+        <input type="hidden" name="r_email" value="bookings@redhackle.be" />
+        <input type="hidden" name="form_type" value="own_form" />
+        <input type="hidden" name="s_subject" value="contact band - booking" />
+        <input type="hidden" name="required[Naam]" value="NAAM" />
+        <input type="hidden" name="required[E-mail]" value="EMAIL" />
+        <input type="hidden" name="required[Plaats]" value="PLAATS" />
+        <input type="hidden" name="required[Datum]" value="DATUM" />
+
+        <label for="">Naam</label>
+        <br />
+        <input
+          class="input"
+          type="text"
+          name="NAAM"
+          maxlength="54"
+          size="30"
+          value=""
+          autofocus
+          placeholder="Uw naam (verplicht veld)"
+          required
+        />
+        <br />
+        <label for="">E-mail</label>
+        <br />
+        <input
+          class="input"
+          type="text"
+          name="EMAIL"
+          maxlength="54"
+          size="30"
+          value=""
+          placeholder="Uw e-mail adres (verplicht veld)"
+          required
+        />
+        <br />
+        <label for="">Locatie optreden</label>
+        <br />
+        <input
+          class="input"
+          name="PLAATS"
+          type="text"
+          id="PLAATS"
+          value=""
+          maxlength="54"
+          size="30"
+          placeholder="Stad/Gemeente/Dorp"
+        />
+        <br />
+        <label for="">Datum/Tijdstip</label>
+        <br />
+        <input
+          class="input"
+          name="PLAATS"
+          type="text"
+          id="PLAATS"
+          value=""
+          maxlength="54"
+          size="30"
+          placeholder="Datum en geschatte uur van aanvang"
+        />
+        <br />
+        <label for="">Aantal spelers</label>
+        <br />
+        <select name="AANTAL">
+          <option>2 (minimum)</option>
+          <option>3-5</option>
+          <option>6-10</option>
+          <option>11-15</option>
+          <option selected="selected">volledige band</option>
+        </select>
+        <br />
+        <label for="">Samenstelling</label>
+        <br />
+        <select name="SAMENSTELLING">
+          <option>enkel pipers</option>
+          <option>pipers + drummer(s)</option>
+          <option selected="selected">pipers, drummers en dansers</option>
+          <option>enkel dansers</option>
+        </select>
+        <br />
+        <label for="">Type optreden</label> <br />
+        <select name="TYPE_OPTREDEN">
+          <option selected="selected">taptoe</option>
+          <option>concert</option>
+          <option>optocht, stoet, braderij,...</option>
+          <option>prive feest (verjaardag, jubleum, tuinfeest,...)</option>
+          <option>bedrijfsfeest, receptie,...</option>
+          <option>officiele gelegenheid, inhuldiging,...</option>
+          <option>huwelijk</option>
+          <option>uitvaart, begrafenis</option>
+          <option>ander (omschrijf in uw vraag hieronder)</option>
+        </select>
+        <br />
+
+        <textarea
+          name="VRAAG"
+          cols="54"
+          rows="5"
+          placeholder="Stel hier uw vraag"
+        ></textarea>
+        <br />
+        <div class="buttons">
+          <input type="submit" value="Verstuur" class="btn btn-primary" />
+          <input
+            name="reset"
+            type="reset"
+            value="Verwijder"
+            class="form btn btn-danger"
+          />
         </div>
-      </nav>
+      </form>
+    </div>
 
-      <div id="main-text">
-  <p>  
-  <p>Vul onderstaande gegevens in m.b.t. een optreden
+    
+    <div class="form-wrapper" id="info">
+        <h3>Vul deze gegevens in voor algemene info. </h3>
 
-  <form action="./assets/cgi-bin/send_form_mail.php.cgi" method="post"></form>
+          
+        <form action="./assets/cgi-bin/send_form_mail.php.cgi" method="post" enctype="multipart/form-data">
+        
+        <input type='hidden' name='r_email' value='info@redhackle.be'>
+        <input type="hidden" name="form_type" value="own_form">
+        <input type="hidden" name="s_subject" value="contact band - info">
+        <input type="hidden" name="required[Naam]" value="NAAM">
+        <input type="hidden" name="required[E-mail]" value="EMAIL">
+        <input type="hidden" name="required[Uw vraag]" value="VRAAG">
+        
+        <label for="">Naam</label>
+        <br />
+        <input
+          class="input"
+          type="text"
+          name="NAAM"
+          maxlength="54"
+          size="30"
+          value=""
+          autofocus
+          placeholder="Uw naam (verplicht veld)"
+          required
+        />
+        <br />
+        <label for="">E-mail</label>
+        <br />
+        <input
+          class="input"
+          type="text"
+          name="EMAIL"
+          maxlength="54"
+          size="30"
+          value=""
+          placeholder="Uw e-mail adres (verplicht veld)"
+          required
+        />
+        <br />
+        <textarea
+        name="VRAAG"
+        cols="54"
+        rows="5"
+        placeholder="Stel hier uw vraag"
+      ></textarea>
+      <br />
+      <div class="buttons">
+        <input type="submit" value="Verstuur" class="btn btn-primary" />
+        <input
+          name="reset"
+          type="reset"
+          value="Verwijder"
+          class="form btn btn-danger"
+        />
+      </div>
+    </div>
 
-<input type="hidden" name="r_email" value="bookings@redhackle.be">
-<input type="hidden" name="form_type" value="own_form">
-<input type="hidden" name="s_subject" value="contact band - booking">
-<input type="hidden" name="required[Naam]" value="NAAM">
-<input type="hidden" name="required[E-mail]" value="EMAIL">
-<input type="hidden" name="required[Plaats]" value="PLAATS">
-<input type="hidden" name="required[Datum]" value="DATUM">
+    <div class="footer">
+      <p>Volg ons op social media voor foto's en meer:</p>
+      <div class="social">
+        <a
+          href="https://www.facebook.com/rhpbhd/"
+          target="_blank"
+          title="facebook"
+        >
+          <i class="fab fa-facebook-f fa-2x"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/redhacklepipeband/"
+          target="_blank"
+          title="instagram"
+        >
+          <i class="fab fa-instagram fa-2x"></i
+        ></a>
+      </div>
 
-      <table width="465" border="0" id="form">
-<tr>
-	<td nowrap="nowrap"><b class="current style1 style1">Naam</b></td>
-	<td width="299"><input type="text" name="NAAM" maxlength="54" size="56" value=""></td>
-</tr>
-<tr>
-<td nowrap="nowrap"><span class="style1"><b>E-mail</b></span></td>
-<td><input type="text" name="EMAIL" maxlength="54" size="56" value=""></td>
-</tr>
+      <footer class="footer-text">
+        <p>
+          This website is copyright of Red Hackle Pipe Band and Highland Dancers
+          vzw. - © RHPB 2019. All rights reserved. Pictures on home page taken
+          by © Jo Photography.
+        </p>
+      </footer>
+    </div>
 
-<tr>
-  <td valign="top" nowrap="nowrap">Plaats optreden </td>
-  <td><input name="PLAATS" type="text" id="PLAATS" value="" maxlength="54" size="56" /></td>
-</tr>
-<tr>
-  <td valign="top" nowrap="nowrap">Datum / Tijdstip </td>
-  <td><input name="DATUM" type="text" id="DATUM" value="" maxlength="54" size="56" /></td>
-</tr>
-<tr>
-  <td valign="top" nowrap="nowrap">Aantal spelers </td>
-  <td><select name="AANTAL">
-    <option>2 (minimum)</option>
-    <option>3-5</option>
-    <option>6-10</option>
-    <option>11-15</option>
-    <option selected="selected">volledige band</option>
-  </select></td>
-</tr>
-<tr>
-  <td valign="top" nowrap="nowrap">Samenstelling</td>
-  <td><select name="SAMENSTELLING">
-    <option>enkel pipers</option>
-    <option>pipers + drummer(s)</option>
-    <option selected="selected">pipers, drummers en dansers</option>
-    <option>enkel dansers</option>
-  </select></td>
-</tr>
-<tr>
-  <td valign="top" nowrap="nowrap">Type optreden </td>
-  <td><select name="TYPE_OPTREDEN">
-    <option selected="selected">taptoe</option>
-    <option>concert</option>
-    <option>optocht, stoet, braderij,...</option>
-    <option>prive feest (verjaardag, jubleum, tuinfeest,...)</option>
-    <option>bedrijfsfeest, receptie,...</option>
-    <option>officiele gelegenheid, inhuldiging,...</option>
-    <option>huwelijk</option>
-    <option>uitvaart, begrafenis</option>
-    <option>ander (omschrijf in uw vraag hieronder)</option>
-  </select></td>
-</tr>
-<tr>
-  <td valign="top" nowrap="nowrap"><strong>Uw vraag </strong></td>
-  <td><textarea name="VRAAG" cols="54" rows="5"></textarea></td>
-</tr>
-<tr>
-  <td colspan="2">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="2">
-      <input type="submit" value="Verstuur">&nbsp;
-      <input name="reset" type="reset" value="Verwijder" /></td>
-</tr>
-</table>
-</body>
+  
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript">
+        const x = document.getElementById("boeking");
+        const y = document.getElementById("info");
+      function myFunction() {
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+          y.style.display ="none";
+        }
+      }
+      function myFunction2() {
+        if (y.style.display === "block") {
+          y.style.display = "none";
+        } else {
+          y.style.display = "block";
+          x.style.display ="none";
+        }
+      }
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
