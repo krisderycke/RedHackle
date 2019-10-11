@@ -1,6 +1,6 @@
 <?php
 
-define('DB_SERVER', '192.168.10.10');
+define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'redhackle');

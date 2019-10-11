@@ -1,0 +1,80 @@
+Bagpipe Reader:1.0
+MIDINoteMappings,(55,57,59,60,62,64,65,67,69,57,58,61,62,64,66,67,69,71,56,58,60,61,63,65,66,68,70)
+FrequencyMappings,(370,415,466,494,554,622,659,740,831,415,466,523,554,622,699,740,831,932,392,440,494,523,587,659,699,784,880)
+InstrumentMappings,(71,71,46,34,1000,60,70)
+GracenoteDurations,(20,40,30,50,100,200,800,1200,250,250,250,500,200)
+FontSizes,(90,100,88,80,250)
+TuneFormat,(1,0,M,L,1000,500,500,500,P,1,0)
+TuneTempo,84
+
+"Retreat",(T,L,0,0,Times New Roman,14,400,0,0,18,0,0,0)
+"The Breda National Tattoo",(Y,C,0,0,Times New Roman,18,700,0,0,18,0,0,0)
+"PM Paul Morreel",(M,R,0,0,Times New Roman,14,400,0,0,18,0,0,0)
+"RHPB, 28/11/14",(F,L,0,0,Times New Roman,10,400,0,0,18,0,0,0)
+"P 13",(F,R,0,0,Times New Roman,14,400,0,0,18,0,0,0)
+
+& sharpf sharpc 3_4 I!''
+gg LA_8 !
+dg LAr_8 'la Bl_16		grp C_4 space 	gg Cr_8 El_8 !
+thrd Dr_16 Cl_16 Bl_8	gg ^ts LA_4 		LAr_8 ^te Cl_8 !
+gg Cr_8 'c Dl_16		gg E_4 space		ag Er_8 HAl_8 !
+Fr_8 Dl_8 dbe ^ts 		E_4 space 		Er_8 ^te  ag El_8 !t
+
+& sharpf sharpc !
+gg Fr_8 HGl_8 		HA_4 space		gg HAr_8 LAl_8 !
+thrd Dr_8 Fl_8	dbe ^ts 	E_4 space		Er_8 ^te gg LAl_8 !
+dg LAr_8 'la Bl_16		grp C_4 space		gg Cr_8 El_8 !
+thrd Dr_16 Cl_16 Bl_8	gg ^ts LA_4 space	LA_8 ^te ''!I
+
+& sharpf sharpc I!''
+E_8 !
+gg Fr_8 HGl_8 		HA_4 space		gg HAr_8 LAl_8 !
+thrd Dr_8 Fl_8			dbe ^ts E_4 space	Er_8 ^te ag El_8 !
+gg Fr_8 HGl_8 		HA_4 space 		gg HAr_8 LAl_8 !
+thrd Dr_8 Cl_8			dbb B_4 'b space	E_8 !t
+
+& sharpf sharpc !
+gg Fr_8 HGl_8 		HA_4 space		gg HAr_8 LAl_8 !
+thrd Dr_8 Fl_8			dbe ^ts E_4 space	Er_8 ^te gg LAl_8 !
+dg LAr_8 'la Bl_16		grp C_4 space		gg Cr_8 El_8 !
+thrd Dr_16 Cl_16 Bl_8	gg ^ts LA_4 space	LA_8 ^te ''!It
+
+Bagpipe Reader:1.0
+MIDINoteMappings,(55,57,59,60,62,64,65,67,69,57,58,61,62,64,66,67,69,71,56,58,60,61,63,65,66,68,70)
+FrequencyMappings,(370,415,466,494,554,622,659,740,831,415,466,523,554,622,699,740,831,932,392,440,494,523,587,659,699,784,880)
+InstrumentMappings,(71,71,46,34,1000,60,70)
+GracenoteDurations,(20,40,30,50,100,200,800,1200,250,250,250,500,200)
+FontSizes,(90,100,100,80,250)
+TuneFormat,(1,0,M,L,500,500,500,500,P,1,0)
+TuneTempo,84
+
+"",(T,L,0,0,Times New Roman,16,700,0,0,18,0,0,0)
+"Seconds",(Y,C,0,0,Times New Roman,16,700,0,0,18,0,0,0)
+"Alleen bij herhaling",(M,R,0,0,Times New Roman,14,400,0,0,18,0,0,0)
+"",(F,R,0,0,Times New Roman,10,400,0,0,18,0,0,0)
+
+& sharpf sharpc 3_4 I!
+gg LA_8 !
+dg LAr_8 'la Bl_16		gg LA_4 space		dg LAr_8 Cl_8 !
+gg Br_16 LAl_16 LGl_8 	gg ^ts LA_4 space	LAr_8 ^te dg LAl_8 !
+eg LAr_8 'la Bl_16 		gg C_4 space	 	dg Cr_8 El_8 !
+Dr_8 Bl_8 			gg ^ts C_4 space	Cr_8 ^te grp El_8 !t
+
+& sharpf sharpc !
+thrd ^ts Dr_8 Dl_8 ^te 	gg C_4			 grp Cr_8 LAl_8 !
+thrd ^ts Dr_8 Dl_8 ^te 	gg ^ts C_4 space	Cr_8 ^te gg LAl_8 !
+dg LAr_8 'la Bl_16		gg LA_4 space		dg LAr_8 Cl_8 !
+gg Br_16 LAl_16 LGl_8 	gg ^ts LA_4 'la space LA_8 ^te !t
+
+& sharpf sharpc !
+E_8 !
+thrd ^ts Dr_8 Dl_8 ^te 	gg C_4 			grp Cr_8 LAl_8 !
+thrd ^ts Dr_8 Dl_8 ^te 	gg ^ts C_4 space 	Cr_8 ^te El_8 !
+thrd ^ts Dr_8 Dl_8 ^te 	gg C_4 			grp Cr_8 LAl_8 !
+thrd Dr_8 Cl_8			gg E_4 'e space 	ag E_8 !t
+
+& sharpf sharpc !
+thrd ^ts Dr_8 Dl_8 ^te 	gg C_4 			grp Cr_8 LAl_8 !
+thrd ^ts Dr_8 Dl_8 ^te 	gg ^ts C_4 space	Cr_8 ^te gg LAl_8 !
+dg LAr_8 'la Bl_16		gg LA_4 space 	dg LAr_8 Cl_8 !
+gg Br_16 LAl_16 LGl_8 	gg ^ts LA_4 space	LA_4 ^te space !It
