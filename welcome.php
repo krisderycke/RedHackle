@@ -9,10 +9,10 @@ include "logoutHeader.php"; ?>
 </h3>
 <div class="container">
   <ul>
-    <li class="welcome-item"><a class="welcome-link" href="ledenlijst.php" target="_blank">Ledenlijst</a></li>
+    <li class="welcome-item"><a class="welcome-link" href="ledenlijst.php">Ledenlijst</a></li>
     <li class="welcome-item"><a class="welcome-link" href="#" target="_blank">Kalender</a></li>
     <li class="welcome-item"><a class="welcome-link" href="#" target="_blank">Basis figuren</a></li>
-    <li class="welcome-item"><a class="welcome-link" href="repertoire.php" target="_blank">Repertoire</a></li>
+    <li class="welcome-item"><a class="welcome-link" href="repertoire.php">Repertoire</a></li>
     <li class="welcome-item"><a class="welcome-link" href="#" target="_blank">Albums</a></li>
   </ul>
 </div>
