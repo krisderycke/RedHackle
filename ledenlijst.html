@@ -1,0 +1,622 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: leden.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <meta charset="UTF-8" />
+        <meta
+          http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1"
+        />
+        <title>Ceud mile fàite, one hondred thousand welcomes</title>
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="./assets/styles/logoutHeader.css" />
+        <link rel="stylesheet" href="./assets/styles/ledenlijst.css" />
+        <link
+          rel="shortcut icon"
+          href="./assets/imgs/favicon.ico"
+          type="image/x-icon"
+        />
+
+        <link
+          href="https://fonts.googleapis.com/css?family=Rosario&display=swap"
+          rel="stylesheet"
+        />
+        <title>Welcome</title>
+      </head>
+      <body>
+        <div class="page-header" style="padding-bottom:9px">
+          <h4 style="font-size:18px">Welkom op het leden portaal</h4>
+          <div class="btns">
+            <button class="btn btn-secondary" style="background-color: #DDDDDD">
+              <a href="welcome.php">Terug</a>
+            </button>
+            <button class="btn btn-secondary" style="background-color: #DDDDDD">
+              <a href="logout.php">Afmelden</a>
+            </button>
+          </div>
+        </div>
+
+        <h4>Wegens de nieuwe Europese wetgeving omtrent GDPR mogen we enkel nog een namenlijst publiceren</h4>
+        <!-- start of cards -->
+        <!-- <div class="containerCard"> -->
+          <!-- <div class="card-deck"> -->
+         
+           <div class="flex-cont">
+              <div class="card" style="width:10rem;">
+                <img src="images/alec.jpg" class="card-img-top" alt="alec" />
+                <div class="card-body">
+                  <h5 class="card-title">Alexander</h5>
+                  <h6 class="card-subtitle text-muted">Jervis</h6>
+                  <p class="card-text">
+                    ~Piper
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width:10rem;">
+                <img src="images/ann.jpg" class="card-img-top" alt="an" />
+                <div class="card-body">
+                  <h5 class="card-title">Ann</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Driessens</h6>
+                  <p class="card-text">
+                    ~Merchandising
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width:10rem;">
+                <img src="images/antje.jpg" class="card-img-top" alt="antje" />
+                <div class="card-body">
+                  <h5 class="card-title">Antje</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Dumon</h6>
+                  <p class="card-text">
+                   ~ Leerling Tenor
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width:10rem;">
+                <img src="images/underconstruction.jpg" class="card-img-top" alt="arne" />
+                <div class="card-body">
+                  <h5 class="card-title">Arne</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Moyson</h6>
+                  <p class="card-text">
+                    ~Leerling Piper
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width:10rem;">
+                <img src="images/bart.jpg" class="card-img-top" alt="bart" />
+                <div class="card-body">
+                  <h5 class="card-title">Bart</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Van Assche</h6>
+                  <p class="card-text">
+                    ~Piper (P.M.)
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width:10rem;">
+                <img src="images/bartvz.jpg" class="card-img-top" alt="bartvz" />
+                <div class="card-body">
+                  <h5 class="card-title">Bart</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Van Zele</h6>
+                  <p class="card-text">
+                    ~Piper
+                  </p>
+                </div>
+              </div>
+ 
+              <div class="card" style="width:10rem;">
+                  <img src="images/bartvermeulen.JPG" class="card-img-top" alt="bartvermeulen" />
+                  <div class="card-body">
+                    <h5 class="card-title">Bart</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Vermeulen</h6>
+                    <p class="card-text">
+                      ~Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/benny.jpg" class="card-img-top" alt="benny" />
+                  <div class="card-body">
+                    <h5 class="card-title">Benny</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Vangenechten</h6>
+                    <p class="card-text">
+                      ~Drum Major
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/bjorn.jpg" class="card-img-top" alt="bjorn" />
+                  <div class="card-body">
+                    <h5 class="card-title">Björn</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Zwinnen</h6>
+                    <p class="card-text">
+                      ~Snare Drummer
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/bob.jpg" class="card-img-top" alt="bob" />
+                  <div class="card-body">
+                    <h5 class="card-title">Bob</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Baets</h6>
+                    <p class="card-text">
+                      ~Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/cynthia.jpg" class="card-img-top" alt="cynthia" />
+                  <div class="card-body">
+                    <h5 class="card-title">Cynthia</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Florus</h6>
+                    <p class="card-text">
+                      ~Dancer
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/dirk.jpg" class="card-img-top" alt="dirk" />
+                  <div class="card-body">
+                    <h5 class="card-title">Dirk</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Machiels</h6>
+                    <p class="card-text">
+                      ~Piper
+                    </p>
+                  </div>
+                </div>
+     
+              <div class="card" style="width:10rem;">
+                  <img src="images/eefje.jpg" class="card-img-top" alt="eefje" />
+                  <div class="card-body">
+                    <h5 class="card-title">Eefje</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Vandamme</h6>
+                    <p class="card-text">
+                      ~Dancer
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/elienf.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Elien</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Faes</h6>
+                    <p class="card-text">
+                     ~Dancer
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+        
+
+          
+              <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+        
+
+          
+              <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+        
+
+          
+              <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+         
+
+          
+              <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+         
+
+          
+              <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+          
+          <!-- LAst row with unequal cards-->
+          
+              <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width:10rem;">
+                  <img src="images/julie.jpg" class="card-img-top" alt="alec" />
+                  <div class="card-body">
+                    <h5 class="card-title">Alexander</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jervis</h6>
+                    <p class="card-text">
+                      Piper
+                    </p>
+                  </div>
+                </div>
+               
+              </div>
+
+        <!-- </div>end of crd-deck -->
+        
+      <!-- </div> -->
+        <!--end of card container-->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"
+        ></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"
+        ></script>
+      </body>
+    </html>
+  </head>
+</html>

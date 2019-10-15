@@ -36,7 +36,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <body>
     <div class="page-header">
       <h4>Welkom op het leden portaal</h4>
+      <div class="btns">
+      <button class="btn"><a href="welcome.php">Terug</a></button>
       <button class="btn"><a href="logout.php">Afmelden</a></button>
+    </div>
     </div> 
 
 <h1>Band Repertoire 2019 - 2020</h1>
