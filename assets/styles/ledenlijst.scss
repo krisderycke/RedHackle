@@ -1,0 +1,32 @@
+// .containerCard {
+* {
+  box-sizing: border-box;
+}
+
+.flex-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #ddd;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h4 {
+  text-align: center;
+  padding: 20px;
+}
+.card-img-top {
+  width: 158px;
+  height: 205px;
+}
+.card-body {
+  padding: 5px 10px;
+}
+.card-text {
+  text-align: right;
+}
+.card {
+  margin: 5px 15px;
+}
